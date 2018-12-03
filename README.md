@@ -3,7 +3,7 @@ Image Captcha Solving Using TensorFlow and CNN Model，with self-labeling image 
 
 &emsp;
 
-Note:this implementation, in some way, is kind of  rough, but effective. hope to motivate your inspiration to do better work.
+Note:this implementation, in some way, is kind of  rough, but effective. hope to motivate your inspiration to do better work. **Code will release later**
 
 # Description
 
@@ -17,7 +17,7 @@ Note:this implementation, in some way, is kind of  rough, but effective. hope to
 
   * preprocessed_img shape:100\*120*1
 
-![from screen shoot, so it's look bigger](./images/processed.png)
+&emsp;&emsp;![from screen shoot, so it's look bigger](./images/processed.png)
 
 - Network-structure
 
@@ -38,3 +38,5 @@ sharing code is: `oacx`，enjoy!
 # contact
 
 If any question, you can contact me: jeffery_cpu@163.cm
+
+last-update:2018/12-4
