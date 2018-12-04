@@ -35,7 +35,7 @@ Note:this implementation, in some way, is kind of  rough, but effective. hope to
 
 # DataSet
 
-&emsp;&emsp;Happy to contribute the dataSet, images are from a real website, labling by tired  eyes and numb hands, so if you think it can do some kind of help,  start it. Thank you! download the data by [Baidu Pan](https://pan.baidu.com/s/1iK3D0sDkbM6_u-LKpgs2Yg),
+&emsp;&emsp;Happy to contribute the dataSet, images are from a real website, labling by tired  eyes and numb hands, so if you think it can do some kind of help,  star it. Thank you! download the data by [Baidu Pan](https://pan.baidu.com/s/1iK3D0sDkbM6_u-LKpgs2Yg),
 
 sharing code is: `oacx`，enjoy!
 
