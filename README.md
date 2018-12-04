@@ -23,9 +23,13 @@ Note:this implementation, in some way, is kind of  rough, but effective. hope to
 
 ![](./images/graph_large_attrs_key=_too_large_attrs&limit_attr_size=1024&run=.png)
 
-- train_accuracy
+- accuracy
 
 ![](./images/acc.png)
+
+&emsp;&emsp;after training, the accuracy is 95%+, managing to identify complex captchas, as below:
+
+![](./images/sp181204_193553.png)
 
 
 
@@ -39,4 +43,4 @@ sharing code is: `oacx`，enjoy!
 
 If any question, you can contact me: jeffery_cpu@163.cm
 
-last-update:2018/12-4
+last-update:2018/12/4
