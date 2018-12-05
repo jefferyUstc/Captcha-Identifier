@@ -46,7 +46,8 @@ def predict_image(captcha):
     saver = tf.train.Saver()
     s = ''
     sess = tf.Session()
-    tf.reset_default_graph()
+	# uncomment codes below if need to validate mutilple imgs in the same program
+    # tf.reset_default_graph()
     sess.run(init_op)
     ckpt = tf.train.get_checkpoint_state('./model_data')
     if ckpt and ckpt.model_checkpoint_path:
@@ -57,7 +58,6 @@ def predict_image(captcha):
 
     for character in pre_list[0]:
         s += characters[character]
-    del sess
     return s
 
 
