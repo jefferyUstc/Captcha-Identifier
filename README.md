@@ -3,7 +3,7 @@ Image Captcha Solving Using TensorFlow and CNN Model，with self-labeling image 
 
 &emsp;
 
-Note:this implementation, in some way, is kind of  rough, but effective. hope to motivate your inspiration to do better work. **Code will release later**
+Note:this implementation, in some way, is kind of  rough, but effective. hope to motivate your inspiration to do better work. 
 
 # Description
 
@@ -11,25 +11,25 @@ Note:this implementation, in some way, is kind of  rough, but effective. hope to
 
   * raw_img shape:100*120
 
-  ​							![goko](./images/goko.png)![goko](./images/ijyp.png)
+  ​							![goko](./img/goko.png)![goko](./img/ijyp.png)
 
 - preprocessed Data
 
   * preprocessed_img shape:100\*120*1
 
-&emsp;&emsp;![from screen shoot, so it's look bigger](./images/processed.png)
+&emsp;&emsp;![from screen shoot, so it's look bigger](./img/processed.png)
 
 - Network-structure
 
-![](./images/graph_large_attrs_key=_too_large_attrs&limit_attr_size=1024&run=.png)
+![](./img/graph_large_attrs_key=_too_large_attrs&limit_attr_size=1024&run=.png)
 
 - accuracy
 
-![](./images/acc.png)
+![](./img/acc.png)
 
 &emsp;&emsp;after training, the accuracy is 95%+, managing to identify complex captchas, as below:
 
-![](./images/sp181204_193553.png)
+![](./img/sp181204_193553.png)
 
 
 
@@ -43,4 +43,4 @@ sharing code is: `oacx`，enjoy!
 
 If any question, you can contact me: jeffery_cpu@163.cm
 
-last-update:2018/12/4
+last-update:2018/12/5
