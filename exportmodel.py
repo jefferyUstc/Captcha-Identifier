@@ -17,9 +17,12 @@ def export_model(checkpoint_path,
     :param model_version: type int best
     :return:no return
     """
+    char_num = 4
+    classes = 26
     with tf.get_default_graph().as_default():
         input_images = tf.placeholder(tf.float32, shape=[None, 100, 120, 1], name='input_images')
         output_result, _ = model(input_images, keep_prob=1.0, trainable=False)
+        output_result = tf.argmax(tf.reshape(output_result, [-1, char_num, classes]), 2)
         saver = tf.train.Saver()
         with tf.Session() as sess:
             ckpt_state = tf.train.get_checkpoint_state(checkpoint_path)
@@ -71,7 +74,7 @@ def export_model(checkpoint_path,
                 # tags:SERVING,TRAINING,EVAL,GPU,TPU
                 sess, [tf.saved_model.tag_constants.SERVING],
                 signature_def_map={
-                    'predict_images': prediction_signature,
+                    'prediction_signature': prediction_signature,
                 })
             print('step4 => builder successfully add meta graph and variables\nNext is to export model...')
             builder.save(as_text=True)
