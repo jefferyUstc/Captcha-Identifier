@@ -9,13 +9,8 @@ import cv2
 import os
 import mymodel
 import time
-
-width = 120
-height = 100
-char_num = 4
-characters = 'abcdefghijklmnopqrstuvwxyz'
-classes = 26
-
+from constant import width, height, char_num, characters, classes
+from utils import get_captcha
 
 def predict_image(captcha):
     """
@@ -44,7 +39,6 @@ def predict_image(captcha):
     predict = tf.argmax(tf.reshape(y_conv, [-1, char_num, classes]), 2)
     init_op = tf.global_variables_initializer()
     saver = tf.train.Saver()
-    s = ''
     sess = tf.Session()
 	# uncomment codes below if need to validate mutilple imgs in the same program
     # tf.reset_default_graph()
@@ -55,10 +49,7 @@ def predict_image(captcha):
     else:
         raise ValueError('oh, bad model, please check')
     pre_list = sess.run(predict, feed_dict={x: img})
-
-    for character in pre_list[0]:
-        s += characters[character]
-    return s
+    return get_captcha(pre_list, characters)
 
 
 if __name__ == '__main__':

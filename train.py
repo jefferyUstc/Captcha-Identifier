@@ -6,14 +6,9 @@ __date__ = '2018/11/25 19:04'
 import tensorflow as tf
 from load_data import get_batch_data
 import mymodel
+from constant import width, height, char_num, characters, classes
 
 if __name__ == '__main__':
-    width = 120
-    height = 100
-    char_num = 4
-    characters = 'abcdefghijklmnopqrstuvwxyz'
-    classes = 26
-
     generate_batch = get_batch_data(batch_size=50, epoch=10, resize_shape=None)
 
     x = tf.placeholder(tf.float32, [None, height, width, 1])

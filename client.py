@@ -10,7 +10,8 @@ import numpy as np
 import grpc
 import os
 import cv2
-
+from constant import characters
+from utils import get_captcha
 
 def process_img(img_path):
     """
@@ -47,7 +48,6 @@ def request_server(img_np,
     :param server_url: TensorFlow Serving url,str type,e.g.'0.0.0.0:8500'
     :return: type numpy array
     """
-    characters = 'abcdefghijklmnopqrstuvwxyz'
     # connect channel
     channel = grpc.insecure_channel(server_url)
     stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
@@ -61,10 +61,11 @@ def request_server(img_np,
     response = stub.Predict(request, 5.0)
     # res_from_server_np = np.asarray(response.outputs[output_name].float_val)
     res_from_server_np = tf.make_ndarray(response.outputs[output_name])
+    
     s = ''
     for character in res_from_server_np[0]:
         s += characters[character]
-    return s
+    return get_captcha(res_from_server_np, characters)
 
 
 if __name__ == '__main__':

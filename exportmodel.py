@@ -5,7 +5,7 @@ __date__ = '2018/12/29 23:20'
 import tensorflow as tf
 from mymodel import captcha_model as model
 import os
-
+from constant import char_num, classes
 
 def export_model(checkpoint_path,
                  export_model_dir,
@@ -17,8 +17,6 @@ def export_model(checkpoint_path,
     :param model_version: type int best
     :return:no return
     """
-    char_num = 4
-    classes = 26
     with tf.get_default_graph().as_default():
         input_images = tf.placeholder(tf.float32, shape=[None, 100, 120, 1], name='input_images')
         output_result, _ = model(input_images, keep_prob=1.0, trainable=False)

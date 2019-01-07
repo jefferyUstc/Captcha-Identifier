@@ -7,11 +7,10 @@ import re
 import time
 import numpy as np
 import cv2
-
+from constant import characters
 base_path = r'D:\java-oxygen\code\outsource\05'  # windows path
 # base_path = ''  # linux path
 folder = 'images'
-characters = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def load_file_list(path=None, regx='\.png', printable=True, label='[a-zA-Z]+'):
